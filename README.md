@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Desafio Desbravador Frontend
+Foi desenvolvido um portal de consulta de usuário github baseado no desafio proposto [nesse link](https://github.com/DesbravadorSoftware/desafioFront).
+> Link da demo https://github-user-finder.up.railway.app/
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Rodando localmente
+Finalizado o clone do repositório, instale as dependências. 
+> OBS: Certifique que a versão do node instalada seja >= 20.15.0 
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+  npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+> Crie uma cópia do arquivo ```env.example``` e renomeie para ```.env```.
+Como o Github impõe um limite de requisições não autenticadas para um determinado IP, será necessário gerar um token para a variável ```VITE_APP_GITHUB_TOKEN```, acesso o [link](https://docs.github.com/pt/rest/authentication/authenticating-to-the-rest-api) para entender como gerar um Github Token. 
+
+>  Após ter configurado o Github token, rode o seguinte comando para startar a aplicação localmente
+
+```bash
+  npm run dev
+```
+
+    
+## Demonstração
+
+![Demo](https://github.com/marcelloJr/desafio-desbravador-frontend/blob/develop/docs/demo.gif?raw=true)

@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './routes/root.tsx'
-import { Paper, ThemeProvider, createTheme } from '@mui/material';
+import { Paper } from '@mui/material';
 import UserDetail from './pages/detail'
 import Repos from './pages/repos'
 import RepoDetail from './pages/repo-detail/index.tsx'
+import { ThemeProvider } from './context/ThemeContext.tsx'
 
 const router = createBrowserRouter([
   {
@@ -29,39 +30,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-const theme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-  components: {
-    MuiButton: {
-      defaultProps: {
-        size: 'small',
-      }
-    },
-    MuiInputLabel: {
-      defaultProps: {
-        size: 'small',
-      }
-    },
-    MuiSelect: {
-      defaultProps: {
-        size: 'small',
-      }
-    },
-    MuiTextField: {
-      defaultProps: {
-        size: 'small',
-      }
-    }
-  }
-})
-
 const innerHeight = window.innerHeight;
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       <Paper 
         variant='outlined' 
         sx={{
