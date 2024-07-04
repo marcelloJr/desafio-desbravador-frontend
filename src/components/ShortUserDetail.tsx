@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import useUserDetail from "@/pages/detail/hooks/useUserDetail";
 import { useParams } from "react-router-dom";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
 import UserIdentification from "@/components/UserCard/UserIdentification";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import UserIdentificationLoading from "@/components/skeletons/UseCard";
+import UserIdentificationSkeleton from "@/components/skeletons/UseCard/Identification";
 
 const ShortUserDetail = () => {
   const params = useParams()
@@ -16,10 +16,7 @@ const ShortUserDetail = () => {
     <Card>
       <CardContent>
         <Grid2 container spacing={2}>
-          <Grid2 xs={12}>
-            <Typography variant='h6'>Repositórios</Typography>
-          </Grid2>
-          {isFetching && <UserIdentificationLoading />}
+          {isFetching && <UserIdentificationSkeleton />}
           {!isFetching && <UserIdentification {...userDetail} />}
         </Grid2>
       </CardContent>

@@ -32,6 +32,28 @@ const router = createBrowserRouter([
 const theme = createTheme({
   palette: {
     mode: 'dark',
+  },
+  components: {
+    MuiButton: {
+      defaultProps: {
+        size: 'small',
+      }
+    },
+    MuiInputLabel: {
+      defaultProps: {
+        size: 'small',
+      }
+    },
+    MuiSelect: {
+      defaultProps: {
+        size: 'small',
+      }
+    },
+    MuiTextField: {
+      defaultProps: {
+        size: 'small',
+      }
+    }
   }
 })
 
