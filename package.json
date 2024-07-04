@@ -1,13 +1,14 @@
 {
   "name": "desafio-desbravador-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -15,11 +16,13 @@
     "@mui/icons-material": "^5.15.21",
     "@mui/material": "^5.15.21",
     "axios": "^1.7.2",
+    "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
